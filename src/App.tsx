@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { useDispatch, useSelector } from "react-redux";
-import { postsSlice, userSlice } from "./store/store";
+import { postsSlice } from "./store/store";
 
 // useSelector subscribe to  slice of store
 function App() {
@@ -19,7 +19,7 @@ function App() {
                 console.log("body", body);
                 dispatch(postsSlice.actions.setPosts(body));
             });
-    }, []);
+    }, [dispatch]);
 
     console.log("posts", posts);
 
