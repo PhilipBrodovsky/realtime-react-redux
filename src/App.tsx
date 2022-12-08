@@ -21,7 +21,6 @@ function App() {
             });
     }, [dispatch]);
 
-    console.log("posts", posts);
 
     return (
         <div className="App">
@@ -36,7 +35,6 @@ function App() {
                     target="_blank"
                     rel="noopener noreferrer"
                 >
-                    Learn React
                 </a>
             </header>
         </div>
