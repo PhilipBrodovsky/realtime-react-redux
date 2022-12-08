@@ -10,6 +10,8 @@ function App() {
         return state.posts.data;
     });
 
+    
+
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -26,16 +28,9 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.tsx</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                </a>
+               {posts.map((post: any) => {
+                return <div key={post.id}>{post.title}</div>
+               })}
             </header>
         </div>
     );
